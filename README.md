@@ -26,9 +26,13 @@ How To Run Code:
                 3.  add users to database.
             
     step 2 : To Login Enter username and Password and Click login to send Login Requests.
+   
     step 3 : Post New question by clicking Post Question.
+   
     step 4 : Answer Posted Question by clicking to make answer.
+   
     step 5 : Like Any Answer by clicking Like Answer.
+   
     step 5 : Logout .
 
    
