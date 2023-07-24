@@ -8,9 +8,7 @@ How To Run Code:
 2. Make changes in Settings.py in Databases Host,User,Port according to you. 
 
 3. Run all Migrations to Test Setup Database table Creation
-    python manage.py migrate auth
-    python manage.py makemigrations
-    python manage.py migrate
+    `python manage.py migrate`
 
 5. Start Django Server by `python manage.py runserver`
 
