@@ -3,16 +3,19 @@ This project is based on Quora like applications by Using Django Framework where
 
 How To Run Code:
 
-1. Create Virtual Environment and Install Required Packages using `pip install -r requirements.txt`
+1. Create Virtual Environment and Install Required Packages using below commands
+        Create: `python -m venv myenv`
+        Activate: `myenv\Scripts\activate`
+        Install Requirements:  `pip install -r requirements.txt`
 
-2. Make changes in Settings.py in Databases Host,User,Port according to you. 
+5. Make changes in Settings.py in Databases Host,User,Port according to you. 
 
-3. Run all Migrations to Test Setup Database table Creation
+6. Run all Migrations to Test Setup Database table Creation
     `python manage.py migrate`
 
-5. Start Django Server by `python manage.py runserver`
+7. Start Django Server by `python manage.py runserver`
 
-6. How To Use.
+8. How To Use.
 
     Step 1 : Create User manually in auth_user table of database OR
             >>python manage.py createsuperuser
