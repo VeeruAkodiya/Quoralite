@@ -17,8 +17,8 @@ How To Run Code:
 
 8. How To Use.
 
-    Step 1 : Create User manually in auth_user table of database OR
-            >>python manage.py createsuperuser
+    Step 1 : Create User to Register Start user
+            `python manage.py createsuperuser`
             Enter username and Password.
 
             If you want to add more users follow below steps:
