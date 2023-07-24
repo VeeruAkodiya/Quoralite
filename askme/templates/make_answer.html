@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Make Answer</title>
+    <style>
+        .shift_middle {
+            margin-left: 30%;
+        }
+        .ans_button {
+            margin-left: 20%;
+            height: 10%;
+            width: 15%;
+        }
+    </style>
+</head>
+<body class="shift_middle">
+    <h1>Make an Answer</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="description"> <b>Description: </b></label>
+        <input type="text" id="description" name="description" size="100"><br> <br> <br>
+        <input class="ans_button" type="submit" value="Submit Answer">
+    </form>
+</body>
+</html>

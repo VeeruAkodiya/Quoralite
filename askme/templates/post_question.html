@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quoralite Question</title>
+    <style>
+        .shift_middle {
+            margin-left: 30%;
+        }
+        .post_button {
+            margin-left: 20%;
+            height: 10%;
+            width: 15%;
+        }
+    </style>
+</head>
+<body class="shift_middle">
+    <h1>Ask a Question</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="title"><b>Title:&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b> </label>
+        <input type="text" id="title" name="title" size="100" width="100"><br><br>
+        <label for="description"><b>Description: &nbsp; </b></label>
+        <input type="text" id="description" name="description" size="100" width="100"><br><br>
+        <input class="post_button" type="submit" value="Post">
+    </form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QuoraLite</title>
+    <style>
+        .shift_middle {
+            margin-left: 35%;
+        }
+        .submit_button {
+            margin-left: 20%;
+            height: 10%;
+            width: 15%;
+        }
+    </style>
+</head>
+<body class="shift_middle">
+    <h1>QuoraLite Login</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="username"><b>Username:  </b></label>
+        <input type="text" id="username" name="username" size="50" width="100"><br><br>
+        <label for="password"> <b>Password: </b></label>
+        <input type="password" id="password" name="password" size="50" width="100"><br> <br>
+        <input class="submit_button" type="submit" value="Login">
+    </form>
+    {% if login_failed %}
+        <p style="color: red;"> Username Password Mismatch</p>
+    {% endif %}
+</body>
+</html>

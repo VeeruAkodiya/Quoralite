@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hit Like</title>
+    <style>
+        .shift_middle {
+            margin-left: 30%;
+        }
+        .like_button {
+            margin-left: 10%;
+            height: 20%;
+            width: 15%;
+        }
+    </style>
+</head>
+<body class="shift_middle">
+    <h1>Make a Like</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="like"> <b>Click on Submit to Like Answer: </b></label>
+        <input class="like_button" type="submit" value="Submit Like">
+    </form>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quoralite Home</title>
+    <style>
+        .shift_middle {
+            margin-left: 30%;
+        }
+    </style>
+</head>
+<body class="shift_middle">
+    <h2>Welcome to Quoralite,
+
+    {% if user.is_authenticated %}
+        &nbsp; {{ user.username }}
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="{% url 'logout' %}">Logout</a> 
+
+    {% else %}
+        <p>Please login to continue.</p>
+        <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+    </h2>
+
+    <hr>
+    <h3>Latest Questions: &nbsp; &nbsp; &nbsp; &nbsp;<a href="{% url 'post_question' %}">Post Question</a> </h3>
+    
+    {% if questions %}
+        <ul>
+            {% for question in questions %}
+                <li>
+                    <b>Q{{ question.id }}: {{ question.title }}</b> &nbsp; (Posted by: <i>{{ question.posted_by }})</i> &nbsp; <a href="{% url 'make_answer' question.id %}">Make Answer</a>
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Description: {{ question.description }}
+
+                    <br><br><b> &nbsp; &nbsp; Latest Answers:</b><br>
+                    {% if question.answers %}
+                        <ul>
+                            {% for answer in question.answers %}
+                                <li>
+                                    {{ answer.description }}  &nbsp; - replied by <b><i>{{ answer.answerd_by }} </i></b>  &nbsp; - Liked by <b> {{ answer.likes }} </b> People
+                                    {% if answer.show_like %}
+                                        &nbsp; &nbsp;<a href="{% url 'hit_like' answer.id %}">Like Answer</a>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <ul>No Reply</ul>
+                    {% endif %}
+                    <br><hr>
+
+
+                </li>
+                <br>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h3>No questions available</h3>
+    {% endif %}
